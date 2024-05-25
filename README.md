@@ -1,50 +1,40 @@
-# Welcome to your Expo app 👋
+## Project Description
+This project is a mobile application developed with React Native, using the @react-navigation/native library to manage the routes between views. The application is designed to display daily astronomical images obtained from an external API, as well as images from the last five days. Here is a detailed description of the structure and main functionalities of the project:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Navigation Structure
+The navigation of the application is managed through a Stack Navigator, allowing transitions between two main views: Home and Details.
 
-## Get started
+### Home: 
+This is the main screen displaying the astronomical image of the day and a list of images from the last five days.
+### Details: 
+This is the detail screen that shows detailed information about a selected image, including its title, date, and an explanation.
 
-1. Install dependencies
+## Components and Functionalities
+### Home:
+##### Header: 
+A common component that displays the application header.
+##### CurrentImages: 
+Displays the image of the current day. It includes a button to navigate to the details view.
+##### LastFiveDays: 
+A list of images from the last five days. Each image has a button to view more details on the Details screen.
 
-   ```bash
-   npm install
-   ```
+## Details:
+### Header: 
+A common component that displays the application header.
+### DetailsComponent: 
+Displays the selected image with its title, date, and detailed explanation.
 
-2. Start the app
+## Data Logic
+### FetchGet: 
+A utility for making HTTP requests to the external API and fetching astronomical image data.
+### DaysFormater: 
+A utility for formatting dates and creating the necessary queries to fetch images from the last five days.
 
-   ```bash
-    npx expo start
-   ```
+## Styles
+The application's design is managed through React Native's StyleSheet, providing consistent and custom styles for various components to ensure an attractive and cohesive user experience.
 
-In the output, you'll find options to open the app in a
+## Lifecycle and Effects
+useEffect: In the Home view, the useEffect hook is used to load the current day's image and images from the last five days when the component mounts. Potential errors during data fetching are handled appropriately.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Overview of the Application
+This project provides an intuitive and visually appealing way for users to explore and learn about daily and recent astronomical images, promoting interest in astronomy and space science.
